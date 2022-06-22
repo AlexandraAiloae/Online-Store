@@ -1,0 +1,8 @@
+﻿.categories-container {
+margin-top: 5px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Segoe Print", cursive;
+}

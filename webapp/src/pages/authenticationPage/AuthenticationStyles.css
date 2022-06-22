@@ -1,0 +1,16 @@
+﻿.authentication {
+  display: flex;
+  width: 100%;
+}
+
+.authentication .authentication-container {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  /* margin: 200px 200px 400px 400px; */
+  margin: 200px auto;
+}
+
+.authentication .navbar {
+  color: black;
+}

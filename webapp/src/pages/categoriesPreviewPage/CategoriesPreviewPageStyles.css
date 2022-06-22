@@ -1,0 +1,12 @@
+﻿.categories-preview-page .navbar {
+  color: black;
+}
+
+.categories-preview-page {
+  display: flex;
+  width: 100%;
+}
+
+.categories-preview-page .categories-preview-page-container {
+  margin-top: 90px;
+}

@@ -1,0 +1,98 @@
+﻿.newUser {
+width: 100%;
+display: flex;
+}
+
+.newUser .newUserContainer{
+    flex: 6;
+}
+
+.newUserContainer .top {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      display: block;
+}
+
+.newUserContainer .top h1{
+      color: lightgray;
+      font-size: 20px;
+      text-align: start;
+
+}
+
+.newUserContainer .bottom {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+}
+
+.newUserContainer .bottom .left{
+    flex: 1;
+    text-align: center;
+}
+
+.newUserContainer .bottom .left img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.newUserContainer .bottom .right{
+    flex: 2;
+}
+
+.newUserContainer .bottom .right form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.newUserContainer .bottom .right form .formInput{
+    width: 40%;
+}
+
+.newUserContainer .bottom .right form .formInput input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.newUserContainer .bottom .right form .formInput label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newUserContainer .bottom .right form .formInput label .icon{
+   cursor: pointer;
+}
+
+.newUserContainer .bottom .right form  button{
+    width: 150px;
+    padding: 10px;
+    border: none;
+  background-image: linear-gradient(
+    45deg,
+    var(--primary-dark) 0%,
+    var(--primary-light) 100%
+  );
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.newUserContainer .bottom .right form button:disabled{
+    background-color: rgb(245, 228, 193);
+    cursor: not-allowed;
+}
+
+
+

@@ -1,0 +1,16 @@
+﻿.categ .category-container {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+}
+
+.categ .navbar {
+    color: black;
+  }
+
+  .categ {
+    display: flex;
+    width: 100%;
+  }

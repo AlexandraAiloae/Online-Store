@@ -1,0 +1,49 @@
+.navbarAdmin {
+  height: 50px;
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  font-size: 14px;
+  color: #555;
+  background-image: linear-gradient(
+    10deg,
+    var(--primary-light) 0%,
+    var(--primary-dark) 100%
+  );
+}
+
+.navbarAdmin .items {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navbarAdmin .item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+.navbarAdmin .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50;
+}
+
+.navbarAdmin .counter {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}

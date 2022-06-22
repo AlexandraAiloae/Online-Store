@@ -1,0 +1,24 @@
+﻿.shop .navbar {
+  color: black;
+}
+
+.shop {
+  display: flex;
+  width: 100%;
+}
+
+/* .shop .shop-container {
+  margin-top: 100px;
+  margin-left:10px;
+  margin-right:10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 10px;
+  row-gap: 50px;
+} */
+
+.shop .shop-container {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+}

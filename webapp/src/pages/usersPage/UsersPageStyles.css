@@ -1,0 +1,14 @@
+﻿.users{
+    display: flex;
+    width: 100%;
+}
+
+.users .usersContainer {
+    flex: 6;
+}
+
+.users .datatable{
+    background-color: var(--primary-light);
+    height: 910px;
+    width: 1700px;
+}
