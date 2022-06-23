@@ -1,6 +1,6 @@
 ﻿import "./CategoryStyles.css";
 
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, Fragment } from "react";
 import { useParams } from "react-router-dom";
 
 import ProductCard from "../../components/product-card/ProductCard";
@@ -20,10 +20,13 @@ const Category = () => {
   return (
     <div className="categ">
       <Navbar color="#111" />
-      <div className="category-container">
-        {products &&
-          products.map((product) => <ProductCard key={product.id} product={product} />)}
-      </div>
+      <div className="categ-section">
+        <h2 className="category-title">{category.toUpperCase()}</h2>
+        <div className="category-container">
+          {products &&
+            products.map((product) => <ProductCard key={product.id} product={product} />)}
+        </div>
+        </div>
     </div>
   );
 };

@@ -83,12 +83,6 @@ function Navbar(props) {
             </Link1>
           </li>
         </ul>
-        {/* <div className="nav-icons">
-          <Link1 to="/authentication">
-          <BsPerson style={{ color: props.color }} className="icon" />{" "}
-          <div className="sign_in_out">SignIn</div>
-        </Link1>
-      </div> */}
         {currentUser ? (
           <div className="nav-link" onClick={signOutUser} style={styles}>
             {" "}
