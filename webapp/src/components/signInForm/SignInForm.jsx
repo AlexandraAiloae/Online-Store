@@ -1,10 +1,9 @@
 ﻿import React, { useState } from "react";
 
-import "./SignInFormStyles.css";
+import { SignInContainer, ButtonsContainer } from "./SignInFormStyles";
 import FormInput from "../formInput/FormInput";
-import Button from "../button/Button";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 import { signInWithGoogleRedirect } from "../../database/firebase";
-import { signInWithRedirect } from "firebase/auth";
 
 import { signInAuthUserWithEmailAndPassword } from "../../database/firebase";
 
@@ -47,12 +46,8 @@ function SignInForm() {
     setFormFields({ ...formFields, [name]: value });
   };
 
-  const googleSignIn = async () => {
-    await signInWithRedirect();
-  };
-
   return (
-    <div className="sign-in-container">
+    <SignInContainer>
       <h2>Already have an account?</h2>
       <span>Sign in with your email and password</span>
       <form onSubmit={handleSubmit}>
@@ -73,14 +68,18 @@ function SignInForm() {
           name="password"
           value={password}
         />
-        <div className="buttons-container">
+        <ButtonsContainer>
           <Button type="submit">Sign In</Button>
-          <Button type="button" buttonType="google" onClick={signInWithGoogleRedirect}>
+          <Button
+            type="button"
+            buttonType={BUTTON_TYPE_CLASSES.google}
+            onClick={signInWithGoogleRedirect}
+          >
             Google Sign In
           </Button>
-        </div>
+        </ButtonsContainer>
       </form>
-    </div>
+    </SignInContainer>
   );
 }
 

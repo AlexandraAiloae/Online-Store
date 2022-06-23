@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/mainPage/MainPage";
-import { AuthContext } from "./pages/loginPage/context/AuthContext";
 import AdminPage from "./pages/adminPage/AdminPage";
 import UsersPage from "./pages/usersPage/UsersPage";
 import UserPage from "./pages/userPage/UserPage";
@@ -14,13 +13,6 @@ import AccountPage from "./pages/accountPage/AccountPage";
 import ContactPage from "./pages/contactPage/ContactPage";
 
 function App() {
-  const { currentUser } = useContext(AuthContext);
-
-  // const RequireAuth = ({ children }) => {
-  //   return currentUser ? children : <Navigate to="/login" />;
-  // };
-
-  console.log(currentUser);
 
   return (
     <div className="app">

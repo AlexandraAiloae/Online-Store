@@ -1,0 +1,17 @@
+﻿import styled from 'styled-components';
+
+export const SignInContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  font-family: "Segoe Print", cursive;
+  h2 {
+    margin: 10px 0;
+    font-family: "Segoe Print", cursive;
+  }
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;

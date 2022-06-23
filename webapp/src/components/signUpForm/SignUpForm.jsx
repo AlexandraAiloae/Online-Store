@@ -1,5 +1,5 @@
 ﻿import React, { useState} from "react";
-import "./SignUpFormStyles.css";
+import { SignUpContainer } from "./SignUpFormStyles";
 import FormInput from "../formInput/FormInput";
 import Button from "../button/Button";
 
@@ -8,7 +8,6 @@ import {
   createUserDocumentFromAuth,
 } from "../../database/firebase";
 
-// import { UserContext } from "../../contexts/user.context";
 
 const defaultFormFields = {
   displayName: "",
@@ -21,7 +20,6 @@ function SignUpForm() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
-  // const {setCurrentUser} = useContext(UserContext);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -37,7 +35,6 @@ function SignUpForm() {
 
     try {
       const { user } = await createAuthUserWithEmailAndPassword(email, password);
-      // setCurrentUser(user);
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
@@ -55,7 +52,7 @@ function SignUpForm() {
   };
 
   return (
-    <div className="sign-up-container">
+    <SignUpContainer>
       <h2>Don't have an account?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
@@ -96,7 +93,7 @@ function SignUpForm() {
         />
         <Button type="submit">Sign Up</Button>
       </form>
-    </div>
+    </SignUpContainer>
   );
 }
 

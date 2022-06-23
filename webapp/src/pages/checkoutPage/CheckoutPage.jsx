@@ -2,7 +2,7 @@
 import { CartContext } from "../../contexts/cart.context";
 import "./CheckoutPageStyles.css";
 import Navbar from "../../components/navbarMainPage/Navbar";
-import CheckoutItem from "../../components/checkout-tem/CheckoutItem";
+import CheckoutItem from "../../components/checkout-Item/CheckoutItem";
 
 function CheckoutPage() {
   const { cartItems, cartTotal} = useContext(CartContext);

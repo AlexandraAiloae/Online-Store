@@ -1,7 +1,7 @@
 ﻿.categ .category-container {
-    margin-top: 90px;
+    margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 20px;
     row-gap: 50px;
 }
@@ -11,6 +11,7 @@
 }
 
 .categ .categ-section .category-title {
+  margin-top: 20px;
   font-size: 38px;
   text-align: center;
   font-family: "Segoe Print", cursive;
