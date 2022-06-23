@@ -4,7 +4,7 @@ import FormInput from "../formInput/FormInput";
 import Button from "../button/Button";
 
 import {
-  craeteAuthUserWithEmailAndPassword,
+  createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../database/firebase";
 
@@ -36,7 +36,7 @@ function SignUpForm() {
     }
 
     try {
-      const { user } = await craeteAuthUserWithEmailAndPassword(email, password);
+      const { user } = await createAuthUserWithEmailAndPassword(email, password);
       // setCurrentUser(user);
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();

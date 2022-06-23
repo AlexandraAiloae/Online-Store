@@ -46,7 +46,7 @@ export const storage = getStorage(app);
 
 export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
 
-export const addCollectionAndDocuments = async (collectionKey, objectsToAdd, field) => {
+export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
   const collectionRef = collection(db, collectionKey);
   const batch = writeBatch(db);
 
@@ -102,7 +102,7 @@ export const createUserDocumentFromAuth = async (
   return userDocRef;
 };
 
-export const craeteAuthUserWithEmailAndPassword = async (email, password) => {
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
   return await createUserWithEmailAndPassword(auth, email, password);
