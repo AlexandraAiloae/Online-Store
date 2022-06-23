@@ -1,6 +1,5 @@
 import React from "react";
 import "./HeroStyles.css";
-// import { BsSearch } from "react-icons/bs";
 
 import Video from "../../assets/video3.mp4";
 
@@ -14,18 +13,8 @@ function Hero() {
       <div className="content">
         <h1>Welcome to AHomeToBe.</h1>
         <h2>There is no place like HOME.</h2>
-        {/* <form className="form">
-          <div>
-            <input type="text" placeholder="Search Books" />
-          </div>
-          <div>
-            <button>
-              <BsSearch className="icon" />
-            </button>
-          </div>
-        </form> */}
       </div>
-</div>
+    </div>
   );
 }
 
