@@ -6,11 +6,27 @@
     row-gap: 50px;
 }
 
+.categ .categ-section {
+  margin-top: 70px;
+}
+
+.categ .categ-section .category-title {
+  font-size: 38px;
+  text-align: center;
+  font-family: "Segoe Print", cursive;
+}
+
 .categ .navbar {
     color: black;
   }
 
   .categ {
+  width: 100%;
     display: flex;
     width: 100%;
   }
+
+
+
+
+
