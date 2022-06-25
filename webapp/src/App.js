@@ -17,8 +17,6 @@ function App() {
   return (
     <div className="app">
       <Routes>
-        {/* to put RequireAuth for MainPage we need to put login first */}
-        {/* <Route path='/' element={<RequireAuth><MainPage/></RequireAuth>}/> */}
         <Route path="/" element={<MainPage />} />
         <Route path="/shop/*" element={<ShopPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />

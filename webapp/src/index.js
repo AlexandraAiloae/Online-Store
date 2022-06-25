@@ -5,13 +5,13 @@ import App from "./App";
 import { UserProvider } from "./contexts/user.context";
 import { CategoriesProvider } from "./contexts/categories.context";
 import { CartProvider } from "./contexts/cart.context";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
-  <Router>
+  <BrowserRouter>
     <UserProvider>
       <CategoriesProvider>
         <CartProvider>
@@ -19,5 +19,5 @@ root.render(
         </CartProvider>
       </CategoriesProvider>
     </UserProvider>
-  </Router>
+  </BrowserRouter>
 );

@@ -7,7 +7,7 @@ import { userColumns } from "../../datatablesource";
 import { Link } from "react-router-dom";
 
 import { collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
-import { db } from "../../database/firebase";
+import { db } from "../../utils/firebase/Firebase"
 
 function Datatable() {
   const [data, setData] = useState([]);

@@ -9,7 +9,7 @@ import CartDropDown from "../cart-dropdown/CartDropDown";
 import {NavbarContainer, NavbarMenu, NavbarLink, NavbarList} from "./NavbarStyles";
 import { UserContext } from "../../contexts/user.context";
 import { CartContext } from "../../contexts/cart.context";
-import { signOutUser } from "../../database/firebase";
+import { signOutUser } from "../../utils/firebase/Firebase";
 
 function Navbar(props) {
   const { currentUser } = useContext(UserContext);
