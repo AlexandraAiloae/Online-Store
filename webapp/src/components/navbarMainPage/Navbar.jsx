@@ -1,16 +1,15 @@
-import React, { useState, useContext } from "react";
-import { Link as Link1 } from "react-router-dom";
-import { Link as Link2 } from "react-scroll";
+import React, {useContext } from "react";
+
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 
 import CartIcon from "../cart-icon/CartIcon";
 import CartDropDown from "../cart-dropdown/CartDropDown";
 
-import {NavbarContainer, NavbarMenu, NavbarLink, NavbarList, NavbarLink2, LogoNavbar} from "./NavbarStyles";
+import {NavbarContainer, NavbarMenu, NavbarLink, NavbarList} from "./NavbarStyles";
 import { UserContext } from "../../contexts/user.context";
 import { CartContext } from "../../contexts/cart.context";
-import { signOutUser } from "../../database/firebase";
+import { signOutUser } from "../../utils/firebase/Firebase";
 
 function Navbar(props) {
   const { currentUser } = useContext(UserContext);

@@ -8,7 +8,7 @@ import NavbarAdmin from "../../components/navbarAdminPage/NavbarAdmin";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
-import { auth, db, storage } from "../../database/firebase";
+import { auth, db, storage } from "../../utils/firebase/Firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 

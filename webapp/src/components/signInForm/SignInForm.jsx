@@ -3,9 +3,8 @@
 import { SignInContainer, ButtonsContainer } from "./SignInFormStyles";
 import FormInput from "../formInput/FormInput";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
-import { signInWithGoogleRedirect } from "../../database/firebase";
+import { signInWithGoogleRedirect, signInAuthUserWithEmailAndPassword } from "../../utils/firebase/Firebase";
 
-import { signInAuthUserWithEmailAndPassword } from "../../database/firebase";
 
 const defaultFormFields = {
   email: "",
