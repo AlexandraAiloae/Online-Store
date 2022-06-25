@@ -1,19 +1,25 @@
-import React, {useContext } from "react";
+import React from "react";
 
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import CartIcon from "../cart-icon/CartIcon";
 import CartDropDown from "../cart-dropdown/CartDropDown";
 
-import {NavbarContainer, NavbarMenu, NavbarLink, NavbarList} from "./NavbarStyles";
-import { UserContext } from "../../contexts/user.context";
-import { CartContext } from "../../contexts/cart.context";
+import {
+  NavbarContainer,
+  NavbarMenu,
+  NavbarLink,
+  NavbarList,
+} from "./NavbarStyles";
+import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import { signOutUser } from "../../utils/firebase/Firebase";
+import { selectCurrentUser } from "../../store/user/user.selector";
 
 function Navbar(props) {
-  const { currentUser } = useContext(UserContext);
-  const { isCartOpen } = useContext(CartContext);
+  const currentUser = useSelector(selectCurrentUser);
+  const isCartOpen = useSelector(selectIsCartOpen);
 
   const styles = {
     fontSize: "1.5rem",
@@ -23,7 +29,7 @@ function Navbar(props) {
   return (
     <Fragment>
       <NavbarContainer>
-        <div className="logo"  style={{ color: props.color }}>
+        <div className="logo" style={{ color: props.color }}>
           <h2>AHomeToBe.</h2>
         </div>
         <NavbarMenu>
@@ -63,17 +69,21 @@ function Navbar(props) {
             </NavbarLink>
           </NavbarList>
           <NavbarList>
-          {currentUser ? (
-          <NavbarLink as='span' onClick={signOutUser} style={styles}>
-            {" "}
-            Sign out{" "}
-          </NavbarLink>
-        ) : (
-          <NavbarLink className="nav-link" to="/authentication" style={styles}>
-            Sign in
-          </NavbarLink>
-        )}
-        </NavbarList>
+            {currentUser ? (
+              <NavbarLink as="span" onClick={signOutUser} style={styles}>
+                {" "}
+                Sign out{" "}
+              </NavbarLink>
+            ) : (
+              <NavbarLink
+                className="nav-link"
+                to="/authentication"
+                style={styles}
+              >
+                Sign in
+              </NavbarLink>
+            )}
+          </NavbarList>
           {/* <li>
             <Link1 to="/admin" style={{ color: props.color }}>
               {" "}

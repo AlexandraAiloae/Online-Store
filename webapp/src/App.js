@@ -11,8 +11,25 @@ import CheckoutPage from "./pages/checkoutPage/CheckoutPage";
 import AuthenticationPage from "./pages/authenticationPage/AuthenticationPage";
 import AccountPage from "./pages/accountPage/AccountPage";
 import ContactPage from "./pages/contactPage/ContactPage";
+import { useState, useEffect } from "react";
+import {
+  onAuthStateChangedListener,
+  createUserDocumentFromAuth,
+} from "./utils/firebase/Firebase";
+import { setCurrentUser } from "./store/user/user.action";
+import { useDispatch } from "react-redux";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    return onAuthStateChangedListener((user) => {
+      if (user) {
+        createUserDocumentFromAuth(user);
+      }
+      dispatch(setCurrentUser(user));
+    });
+  }, []);
 
   return (
     <div className="app">
