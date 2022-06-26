@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/mainPage/MainPage";
 import AdminPage from "./pages/adminPage/AdminPage";
@@ -11,7 +11,7 @@ import CheckoutPage from "./pages/checkoutPage/CheckoutPage";
 import AuthenticationPage from "./pages/authenticationPage/AuthenticationPage";
 import AccountPage from "./pages/accountPage/AccountPage";
 import ContactPage from "./pages/contactPage/ContactPage";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {
   onAuthStateChangedListener,
   createUserDocumentFromAuth,
