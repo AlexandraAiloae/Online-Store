@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export const NavbarContainer = styled.div`
   width: 100%;
-  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +23,7 @@ export const NavbarMenu = styled.ul`
 `;
 
 export const NavbarLink = styled(Link)`
-  align-items: center;
+  align-items: right;
   cursor: pointer;
 `;
 
