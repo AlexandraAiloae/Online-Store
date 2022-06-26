@@ -1,16 +1,16 @@
-﻿.categ .category-container {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 20px;
-    row-gap: 50px;
+﻿.category-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 20px;
+  row-gap: 50px;
 }
 
 .categ .categ-section {
   margin-top: 70px;
 }
 
-.categ .categ-section .category-title {
+.categ-section .category-title {
   margin-top: 20px;
   font-size: 38px;
   text-align: center;
@@ -18,16 +18,10 @@
 }
 
 .categ .navbar {
-    color: black;
-  }
+  color: black;
+}
 
-  .categ {
+.categ {
   width: 100%;
-    display: flex;
-    width: 100%;
-  }
-
-
-
-
-
+  display: flex;
+}
