@@ -3,8 +3,10 @@
 import { SignInContainer, ButtonsContainer } from "./SignInFormStyles";
 import FormInput from "../formInput/FormInput";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
-import { signInWithGoogleRedirect, signInAuthUserWithEmailAndPassword } from "../../utils/firebase/Firebase";
-
+import {
+  signInWithGoogleRedirect,
+  signInAuthUserWithEmailAndPassword,
+} from "../../utils/firebase/Firebase";
 
 const defaultFormFields = {
   email: "",
@@ -32,6 +34,9 @@ function SignInForm() {
           break;
         case "auth/user-not-found":
           alert("no user associated with this email");
+          break;
+        case "auth/weak-password":
+          alert("Password should be at least 6 characters");
           break;
         default:
           console.log(error);
