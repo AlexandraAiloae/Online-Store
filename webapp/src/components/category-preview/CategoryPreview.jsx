@@ -1,6 +1,6 @@
 ﻿import React from "react";
 import { CategoryPreviewContainer, Title, Preview } from "./CategoryPreviewStyles";
-import ProductCard from "../product-card/ProductCard";
+import ProductCard from "../product-cart/ProductCart";
 
 const CategoryPreview = ({ title, products }) => {
   return (

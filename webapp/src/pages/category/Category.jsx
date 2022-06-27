@@ -4,7 +4,7 @@ import { useState, useEffect, Fragment } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import ProductCard from "../../components/product-card/ProductCard";
+import ProductCart from "../../components/product-cart/ProductCart";
 import Navbar from "../../components/navbarMainPage/Navbar";
 import Spinner from "../../components/spinner/spinner.component";
 
@@ -34,7 +34,7 @@ const Category = () => {
           <div className="category-container">
             {products &&
               products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCart key={product.id} product={product} />
               ))}
           </div>
         )}
