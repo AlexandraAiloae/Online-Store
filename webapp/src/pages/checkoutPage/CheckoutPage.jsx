@@ -7,6 +7,7 @@ import {
 import "./CheckoutPageStyles.css";
 import Navbar from "../../components/navbarMainPage/Navbar";
 import CheckoutItem from "../../components/checkout-Item/CheckoutItem";
+import PaymentForm from "../../components/payment-form/payment-form.component";
 
 function CheckoutPage() {
   const cartItems = useSelector(selectCartItems);
@@ -36,6 +37,7 @@ function CheckoutPage() {
           <CheckoutItem key={cartItem.id} cartItem={cartItem} />
         ))}
         <span className="total">Total: {cartTotal} Lei</span>
+        <PaymentForm />
       </div>
     </div>
   );
