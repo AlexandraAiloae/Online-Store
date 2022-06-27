@@ -56,18 +56,18 @@ function Navbar(props) {
               Shop{" "}
             </NavbarLink>
           </NavbarList>
-          <NavbarList>
+          {/* <NavbarList>
             <NavbarLink to="/account" style={{ color: props.color }}>
               {" "}
               Account{" "}
             </NavbarLink>
-          </NavbarList>
-          <NavbarList>
+          </NavbarList> */}
+          {/* <NavbarList>
             <NavbarLink to="/contact" style={{ color: props.color }}>
               {" "}
               Contact{" "}
             </NavbarLink>
-          </NavbarList>
+          </NavbarList> */}
           <NavbarList>
             {currentUser ? (
               <NavbarLink as="span" onClick={signOutUser} style={styles}>
